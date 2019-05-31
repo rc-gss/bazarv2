@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>BAZAR v2</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="topHeader">
+        <div class="topnav--left">
+          <ul class="topnav__list--left">
+            <li class="menu__list">
+              <a href="#" class="menu__link"
+                >USD<i class="fas fa-caret-down"></i
+              ></a>
+              <ul>
+                <li>FIL</li>
+                <li>JPN</li>
+              </ul>
+            </li>
+            <li class="menu__list">
+              English
+              <i class="fas fa-caret-down"></i>
+              <ul>
+                <li>Filipino</li>
+                <li>Nihonggo</li>
+              </ul>
+            </li>
+            <li class="menu__list">
+              Help
+              <i class="fas fa-caret-down"></i>
+              <ul>
+                <li>FAQs</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="topnav--right">
+          <ul class="topnav__list--right">
+            <li class="menu__list">
+              <a href="#" class="menu__link">
+                <i class="fas fa-user"></i>Login</a
+              >
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link"
+                ><i class="fas fa-lock"></i>Register</a
+              >
+            </li>
+            <li class="menu__list">
+              <a href="#" class="menu__link"><i class="fas fa-bars"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottomHeader">
+        <div class="header__phone">
+          <img class="phone__icon" src="images/smartphone.png" />
+          <!-- <i class="fas fa-mobile-alt"></i> -->
+          <span class="phone__text">2300</span
+          ><span class="phone__text"> - </span
+          ><span class="phone__text">3560</span
+          ><span class="phone__text"> - </span
+          ><span class="phone__text">3560</span>
+        </div>
+        <div class="header__logo">
+          <img src="/images/logo.png" />
+        </div>
+        <div class="cart__container">
+          <!-- <img src="/images/cart-bg.png" class="cart--bg" /> -->
+          <div class="cart__content">
+            <i class="fas fa-shopping-bag fa-2x"></i>
+            <div class="text__wrapper">
+              <span class="cart__items cart__items--text">34</span></div
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="menubar">
+        <div class="menubar__container--left">
+          <div class="category__container">
+            <img class="img__category" src="images/category.png" alt="" />
+            <select>
+              <option value="0">Select a category: </option>
+              <option value="1">OFFICE</option>
+              <option value="2">SHOP</option>
+              <option value="3">HOME</option>
+            </select>
+          </div>
+          <div class="search__container">
+            <input
+              type="text"
+              name="search"
+              onfocus="this.placeholder=''"
+              placeholder="Search Products... "
+            />
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+
+        <div class="bars__container"><i class="fas fa-bars"></i></div>
+
+        <div class="menubar__container--right">
+          <ul class="nav__container">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">FURNITURE</a></li>
+            <li><a href="#">CHAIR</a></li>
+            <li><a href="#">TABLE</a></li>
+            <li><a href="#">SOFA</a></li>
+            <li><a href="#">BEDROOM</a></li>
+            <li><a href="#">BLOG</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- deal starts -->
+      <div class="wrapper">
+        <div class="deals">
+          <div class="deals--top">
+            <span class="deals__text">HOT DEALS</span>
+            <div class="ellipsis"></div>
+            <div class="ellipsis"></div>
+            <div class="ellipsis"></div>
+          </div>
+          <div class="deals__body">
+            <div class="__wrapper">
+              <div class="cart--middle">
+                <div class="cart__wrapper">
+                  <a href="#"
+                    ><i class="fas fa-shopping-bag"></i> ADD TO CART
+                  </a>
+                </div>
+              </div>
+              <!-- timer -->
+              <div class="timer">
+                <div class="timer__wrapper">
+                  <span id="days"></span>
+                  <div class="timer__text">DAYS</div>
+                </div>
+                <div class="timer__wrapper">
+                  <span id="hour"></span>
+                  <div class="timer__text">HRS</div>
+                </div>
+                <div class="timer__wrapper">
+                  <span id="min"></span>
+                  <div class="timer__text">MINS</div>
+                </div>
+                <div class="timer__wrapper">
+                  <span id="sec"></span>
+                  <div class="timer__text">SECS</div>
+                </div>
+              </div>
+            </div>
+            <div class="productinfo">
+              <p class="product__name">Aenean Ru Bristique</p>
+              <div class="star__wrapper"
+                ><span class="fa fa-star"></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span
+              ></div>
+              <img src="images/line.png" alt="" class="line" />
+              <div class="list__icons">
+                <ul>
+                  <li><img src="images/icon-1.png" alt=""/></li>
+                  <li><img src="images/icon-2.png" alt=""/></li>
+                  <li><img src="images/icon-3.png" alt=""/></li>
+                </ul>
+              </div>
+              <div class="price__wrapper"
+                ><span class="oldprice">$350.00</span>
+                <span class="newprice">$300.00</span></div
+              >
+            </div>
+          </div>
+        </div>
+        <!-- deals ends -->
+        <!-- slider starts -->
+        <div class="slider">
+          <div class="slider__wrapper">
+            <img class="slider__img" src="images/slider-1.jpg" />
+            <img class="slider__img" src="images/slider-2.jpg" />
+            <img class="slider__img" src="images/slider-3.jpg" />
+            <div class="__text__wrapper">
+              <span class="slider__text">INDOOR</span
+              ><span class="slider__text">FURNITURE</span>
+              <span class="slider__text">SAVE UP TO 50% OF ALL FURNITURE</span>
+              <div class="btn__shop">
+                <span class="btn__text"><a href="#">SHOP NOW</a></span>
+              </div>
+            </div>
+            <div class="slider__btn">
+              <div class="slider--left" onclick="moveSlide(-1)">
+                <span>&#10094;</span>
+              </div>
+              <div class="slider--right" onclick="moveSlide(1)">
+                <span>&#10095;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- shipping, cx care, refund, discount -->
+      <div class="options">
+        <div class="options__container">
+          <ul class="options__list">
+            <li class="options_ _shipping">
+              <div class="text__container">
+                <div class="icon__container">
+                  <div class="icon__inner">
+                    <i class="fas fa-truck fa-flip-horizontal fa-lg"></i>
+                  </div>
+                </div>
+                <div class="text__title">
+                  <span class="text__size">FREE SHIPPING</span>
+                  <span class="text__size">ALL ORDER</span>
+                </div>
+              </div>
+            </li>
+            <li class="options_ _cxcare">
+              <div class="icon__container">
+                <div class="icon__inner icon__cxcare">
+                  <i class="fas fa-headphones fa-lg"></i>
+                </div>
+              </div>
+              <div class="text__container">
+                <div class="text__title">
+                  <span class="text__size">24/7 CUSTOMER</span>
+                  <span class="text__size">SUPPORT</span>
+                </div>
+              </div>
+            </li>
+            <li class="options_ _refund">
+              <div class="icon__container">
+                <div class="icon__inner icon__refund">
+                  <i class="fas fa-undo fa-lg"></i>
+                </div>
+              </div>
+              <div class="text__container">
+                <div class="text__title">
+                  <span class="text__size">MONEY BACK</span>
+                  <span class="text__size">GUARANTEE</span>
+                </div>
+              </div>
+            </li>
+            <li class="options_ _discount">
+              <div class="icon__container">
+                <div class="icon__inner icon__discount">
+                  <i class="fas fa-bullhorn fa-lg"></i>
+                </div>
+              </div>
+              <div class="text__container">
+                <div class="text__title">
+                  <span class="text__size">MEMBER DISCOUNT</span>
+                  <span class="text__size">FIRST ORDER</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ads -->
+      <div class="ads">
+        <div class="ads__container--left">
+          <img src="images/ad-1.jpg" alt="" />
+          <!-- <img src="../images/ad-1.jpg" alt="" /> -->
+        </div>
+        <div class="ads__container--right">
+          <img class="ads__img" id="ads--top" src="images/ad-2.jpg" alt="" />
+          <img class="ads__img" id="ads--bottom" src="images/ad-3.jpg" alt="" />
+        </div>
+      </div>
+      <!-- new products -->
+      <div class="newproducts">
+        <div class="container__products">
+          <span>NEW FURNITURE</span>
+          <div class="prod__wrapper">
+            <ul class="product__list">
+              <li><a href="#">BED</a></li>
+              <li><a href="#">CHAIR</a></li>
+              <li><a href="#">SOFA</a></li>
+              <li><a href="#">TABLE</a></li>
+              <li><a href="#">DINING</a></li>
+            </ul>
+          </div>
+        </div>
+        <img src="images/line-np.png" alt="" class="line-np" />
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+        <div class="arrow"></div>
+      </div>
+      <!-- product grid -->
+      <div class="product__grid">
+        <div class="product__container">
+          <ul class="product__list">
+            <li class="__list--item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <div class="sale__wrapper">
+                    <span class="sale">sale</span></div>
+                  <img src="images/prod-1.jpg" alt="" class="card__img" />
+                  <div class="card__info">
+                    <p class="card__name">Aenean Ru Bristique</p>
+                    <div class="card__star">
+                      <ul class="__list">
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                      </ul>
+                    </div>
+                    <img src="images/card-line.png" alt="" class="card__line" />
+                      <ul class="card__icons">
+                        <li class="icons__list">
+                          <div><i class="far fa-heart"></i></div>
+                        </li>
+                        <li class="icons__list">
+                          <div><i class="fas fa-exchange-alt"></i></div>
+                        </li>
+                        <li class="icons__list__price">
+                          <div class="card__price">
+                            <span class="card__newprice">$30.00</span>
+                          </div>
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="__list--item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img src="images/prod-2.jpg" alt="" class="card__img" />
+                  <div class="card__info">
+                    <p class="card__name">Aenean Ru Bristique</p>
+                    <div class="card__star">
+                      <ul class="__list">
+
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                      </ul>
+                    </div>
+                    <img src="images/card-line.png" alt="" class="card__line" />
+                    <ul class="card__icons">
+                      <li class="icons__list">
+                        <div><i class="far fa-heart"></i></div>
+                      </li>
+                      <li class="icons__list">
+                        <div><i class="fas fa-exchange-alt"></i></div>
+                      </li>
+                      <li class="icons__list__price">
+                        <div class="card__price">
+                          <span class="card__newprice">$30.00</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="__list--item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img src="images/prod-3.jpg" alt="" class="card__img" />
+                  <div class="card__info">
+                    <p class="card__name">Aenean Ru Bristique</p>
+                    <div class="card__star">
+                      <ul class="__list">
+
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                      </ul>
+                    </div>
+                    <img src="images/card-line.png" alt="" class="card__line" />
+                    <ul class="card__icons">
+                      <li class="icons__list">
+                        <div><i class="far fa-heart"></i></div>
+                      </li>
+                      <li class="icons__list">
+                        <div><i class="fas fa-exchange-alt"></i></div>
+                      </li>
+                      <li class="icons__list__price">
+                        <div class="card__price">
+                          <span class="card__oldprice">$35.00</span>
+                          <span class="card__newprice">$25.00</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="__list--item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img src="images/prod-4.jpg" alt="" class="card__img" />
+                  <div class="card__info">
+                    <p class="card__name">Aenean Ru Bristique</p>
+                    <div class="card__star">
+                      <ul class="__list">
+
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                      </ul>
+                    </div>
+                    <img src="images/card-line.png" alt="" class="card__line" />
+                    <ul class="card__icons">
+                      <li class="icons__list">
+                        <div><i class="far fa-heart"></i></div>
+                      </li>
+                      <li class="icons__list">
+                        <div><i class="fas fa-exchange-alt"></i></div>
+                      </li>
+                      <li class="icons__list__price">
+                        <div class="card__price">
+                          <span class="card__oldprice">$20.00</span>
+                          <span class="card__newprice">$15.00</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="__list--item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img src="images/prod-5.jpg" alt="" class="card__img" />
+                  <div class="card__info">
+                    <p class="card__name">Aenean Ru Bristique</p>
+                    <div class="card__star">
+                      <ul class="__list">
+
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                      </ul>
+                    </div>
+                    <img src="images/card-line.png" alt="" class="card__line" />
+                    <ul class="card__icons">
+                      <li class="icons__list">
+                        <div><i class="far fa-heart"></i></div>
+                      </li>
+                      <li class="icons__list">
+                        <div><i class="fas fa-exchange-alt"></i></div>
+                      </li>
+                      <li class="icons__list__price">
+                        <div class="card__price">
+                          <span class="card__newprice">$30.00</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="__list--item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img src="images/prod-6.jpg" alt="" class="card__img" />
+                  <div class="card__info">
+                    <p class="card__name">Aenean Ru Bristique</p>
+                    <div class="card__star">
+                      <ul class="__list">
+
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                      </ul>
+                    </div>
+                    <img src="images/card-line.png" alt="" class="card__line" />
+                    <ul class="card__icons">
+                      <li class="icons__list">
+                        <div><i class="far fa-heart"></i></div>
+                      </li>
+                      <li class="icons__list">
+                        <div><i class="fas fa-exchange-alt"></i></div>
+                      </li>
+                      <li class="icons__list__price">
+                        <div class="card__price">
+                          <span class="card__newprice">$30.00</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="__list--item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img src="images/prod-7.jpg" alt="" class="card__img" />
+                  <div class="card__info">
+                    <p class="card__name">Aenean Ru Bristique</p>
+                    <div class="card__star">
+                      <ul class="__list">
+
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                      </ul>
+                    </div>
+                    <img src="images/card-line.png" alt="" class="card__line" />
+                    <ul class="card__icons">
+                      <li class="icons__list">
+                        <div><i class="far fa-heart"></i></div>
+                      </li>
+                      <li class="icons__list">
+                        <div><i class="fas fa-exchange-alt"></i></div>
+                      </li>
+                      <li class="icons__list__price">
+                        <div class="card__price">
+                          <span class="card__oldprice">$35.00</span>
+                          <span class="card__newprice">$25.00</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="__list--item">
+              <div class="card">
+                <div class="card__wrapper">
+                  <img src="images/prod-8.jpg" alt="" class="card__img" />
+                  <div class="card__info">
+                    <p class="card__name">Aenean Ru Bristique</p>
+                    <div class="card__star">
+                      <ul class="__list">
+
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                        <li><span class="fa fa-star checked"></span></li>
+                      </ul>
+                    </div>
+                    <img src="images/card-line.png" alt="" class="card__line" />
+                    <ul class="card__icons">
+                      <li class="icons__list">
+                        <div><i class="far fa-heart"></i></div>
+                      </li>
+                      <li class="icons__list">
+                        <div><i class="fas fa-exchange-alt"></i></div>
+                      </li>
+                      <li class="icons__list__price">
+                        <div class="card__price">
+                          <span class="card__oldprice">$20.00</span>
+                          <span class="card__newprice">$15.00</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Furniture Gallery -->
+      <!-- <div class="second__wrapper">
+        <div class="furniture">
+          <div class="furn__container">
+            <p class="furn__title">FURNITURE GALLERY</p>
+            <img src="images/furniture-line.png" alt="" class="furn__line" />
+          </div>
+        </div>
+        <div class="ads__gallery">
+          <p class="ads__text"
+            >FROM <span class="price--green">$50.80</span
+            ><span class="price__text">Bedroom Bed</span></p
+          >
+
+          <div class="btn__green">
+            <span class="text--green">SHOP NOW</span>
+          </div>
+        </div>
+      </div> -->
+    </main>
+    <script type="text/javascript" src="/js/script.js"></script>
+  </body>
+</html>

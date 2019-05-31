@@ -1,0 +1,22 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function ffPoppins($style: regular) {
+  @return ffPoppins-#{$style}, "Poppins", sans-serif;
+}
+
+@mixin old-priceTag() {
+  font-size: 14px;
+  color: gray;
+  text-decoration: line-through;
+  text-decoration-color: #000;
+}
+@mixin new-priceTag() {
+  background-image: url("/images/price-bg.png");
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+}
