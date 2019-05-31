@@ -475,7 +475,6 @@ a {
 ._discount {
   position: relative;
   margin: 20px 10px 0px;
-  background-color: antiquewhite;
 }
 
 ._shipping:hover .text__container,
@@ -508,7 +507,6 @@ a {
 }
 
 .text__size {
-  padding: 0px 20px;
   &:nth-child(odd) {
     font-weight: bold;
   }
@@ -519,8 +517,7 @@ a {
 .fa-undo,
 .fa-bullhorn {
   position: absolute;
-  margin-left: 5px;
-  margin-top: 10px;
+  padding: 20px;
 }
 
 .fa-truck:hover {
@@ -539,13 +536,6 @@ a {
   color: #fff;
 }
 
-i.fas.fa-headphones {
-  margin: 10px 8px;
-}
-
-i.fas.fa-undo.fa-lg {
-  margin: 10px;
-}
 // options end
 
 // ads starts
@@ -646,6 +636,7 @@ i.fas.fa-undo.fa-lg {
   width: 264px;
   height: 410px;
   border: 2px solid #e2e2e2;
+  position: relative;
   //   border: 5px solid green;
   &:hover {
     .card__name {
@@ -656,6 +647,23 @@ i.fas.fa-undo.fa-lg {
     }
   }
   &__wrapper {
+    .sale__wrapper {
+      position: absolute;
+      width: 60px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $text-color;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+      border-bottom-left-radius: 110px;
+      border-bottom-right-radius: 110px;
+      .sale {
+        color: #fff;
+        font-size: 12px;
+      }
+    }
     .card__img {
       width: 100%;
       height: 260px;
