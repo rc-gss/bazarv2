@@ -724,11 +724,19 @@ footer {
           font-size: 14px;
           line-height: 30px;
           color: #a9a9a9; }
-        footer .footer--top .footer__wrapper--top .__list__wrapper ul li .card__payments {
-          margin-top: 30px; }
-          footer .footer--top .footer__wrapper--top .__list__wrapper ul li .card__payments li {
-            display: inline; }
-            footer .footer--top .footer__wrapper--top .__list__wrapper ul li .card__payments li a {
-              margin-right: 10px; }
+    footer .footer--top .footer__wrapper--top .card__payments {
+      margin-top: 30px;
+      margin-right: 40px;
+      float: right; }
+      footer .footer--top .footer__wrapper--top .card__payments .payments__link {
+        display: inline; }
+        footer .footer--top .footer__wrapper--top .card__payments .payments__link a {
+          margin-right: 10px; }
+  footer .footer-bottom {
+    max-width: 1140px;
+    margin: 0px auto; }
+    footer .footer-bottom .footer__wrapper--bottom {
+      background-color: #2a2a2a;
+      height: 95px; }
 
 /*# sourceMappingURL=styles.css.map */

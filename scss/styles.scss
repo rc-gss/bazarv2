@@ -698,7 +698,7 @@ a {
                         margin: 15px 12px 0px 0px;
                         .card__oldprice {
                             @include old-priceTag();
-                        }
+                       }
                         .card__newprice {
                             @include new-priceTag();
                             padding: 10px;
@@ -741,17 +741,19 @@ footer {
                         a {
                             font-size: 14px;
                             line-height: 30px;
-                            color: #a9a9a9;
+                            color: $footer-text-color;
                         }
-                        .card__payments {
-                            margin-top: 30px;
-                            li {
-                                display: inline;
-                                a {
-                                    margin-right: 10px;
-                                }
-                            }
-                        }
+                    }
+                }
+            }
+            .card__payments {
+                margin-top: 30px;
+                margin-right: 40px;
+                float: right;
+                .payments__link {
+                    display: inline;
+                    a {
+                        margin-right: 10px;
                     }
                 }
             }
@@ -761,5 +763,13 @@ footer {
             //     float: right;
             // }
         }
+    }
+    .footer-bottom{
+        max-width: 1140px;
+        margin: 0px auto;
+        .footer__wrapper--bottom{
+        background-color: $text-color;
+        height: 95px;
+      }
     }
 }
