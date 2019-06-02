@@ -15,7 +15,7 @@
   text-decoration-color: #000;
 }
 @mixin new-priceTag() {
-  background-image: url("/images/price-bg.png");
+  background-color: #2a2a2a;
   color: white;
   padding: 12px;
   font-size: 18px;
