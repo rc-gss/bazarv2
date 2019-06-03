@@ -357,12 +357,14 @@ a {
         background-color: #d58e32; }
   .deals .deals__body {
     height: 455px;
-    background-image: url("/images/deals-bg-gray.png");
     background-repeat: no-repeat; }
     .deals .deals__body .__wrapper {
       height: 289px;
       position: relative;
       /* timer */ }
+      .deals .deals__body .__wrapper .cart__img img {
+        width: 100%;
+        height: 289px; }
       .deals .deals__body .__wrapper .cart--middle {
         background-image: url("/images/add-cart-bg.png");
         background-repeat: no-repeat;
@@ -702,41 +704,52 @@ a {
             padding: 10px; }
 
 footer {
-  height: 332px;
-  background-color: #363636; }
+  height: 332px; }
   footer .footer--top {
-    max-width: 1140px;
-    margin: 0px auto;
-    padding: 60px 0px; }
-    footer .footer--top .footer__wrapper--top .__list__wrapper {
-      width: 153px;
-      margin-right: 120px;
-      display: inline-block; }
-      footer .footer--top .footer__wrapper--top .__list__wrapper ul li {
-        display: block; }
-        footer .footer--top .footer__wrapper--top .__list__wrapper ul li h3 {
-          font-size: 22px;
-          line-height: 30px;
-          color: #ffffff;
-          margin-bottom: 37px;
-          font-weight: bold; }
-        footer .footer--top .footer__wrapper--top .__list__wrapper ul li a {
-          font-size: 14px;
-          line-height: 30px;
-          color: #a9a9a9; }
-    footer .footer--top .footer__wrapper--top .card__payments {
-      margin-top: 30px;
-      margin-right: 40px;
-      float: right; }
-      footer .footer--top .footer__wrapper--top .card__payments .payments__link {
-        display: inline; }
-        footer .footer--top .footer__wrapper--top .card__payments .payments__link a {
-          margin-right: 10px; }
+    background-color: #363636; }
+    footer .footer--top .footer__wrapper--top {
+      max-width: 1140px;
+      margin: 0px auto;
+      padding: 60px 0px; }
+      footer .footer--top .footer__wrapper--top .__list__wrapper {
+        width: 153px;
+        margin-right: 120px;
+        display: inline-block; }
+        footer .footer--top .footer__wrapper--top .__list__wrapper ul li {
+          display: block; }
+          footer .footer--top .footer__wrapper--top .__list__wrapper ul li h3 {
+            font-size: 22px;
+            line-height: 30px;
+            color: #ffffff;
+            margin-bottom: 37px;
+            font-weight: bold; }
+          footer .footer--top .footer__wrapper--top .__list__wrapper ul li a {
+            font-size: 14px;
+            line-height: 30px;
+            color: #a9a9a9; }
+      footer .footer--top .footer__wrapper--top .card__payments {
+        margin-top: 30px;
+        margin-right: 40px;
+        float: right; }
+        footer .footer--top .footer__wrapper--top .card__payments .payments__link {
+          display: inline; }
+          footer .footer--top .footer__wrapper--top .card__payments .payments__link a {
+            margin-right: 10px; }
   footer .footer-bottom {
-    max-width: 1140px;
-    margin: 0px auto; }
+    background-color: #2a2a2a; }
     footer .footer-bottom .footer__wrapper--bottom {
-      background-color: #2a2a2a;
-      height: 95px; }
+      max-width: 1140px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 40px; }
+      footer .footer-bottom .footer__wrapper--bottom .icons__social {
+        float: right; }
+        footer .footer-bottom .footer__wrapper--bottom .icons__social .social__list li {
+          margin-right: 25px;
+          color: #a9a9a9; }
+          footer .footer-bottom .footer__wrapper--bottom .icons__social .social__list li:hover {
+            color: #d58e32; }
+          footer .footer-bottom .footer__wrapper--bottom .icons__social .social__list li .social__image {
+            width: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
