@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/977cc5f08e.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>BAZAR v2</title>
 </head>
@@ -275,19 +275,15 @@
         <!-- new products -->
         <div class="newproducts">
             <div class="container__products">
-                <span>NEW FURNITURE</span>
-                <div class="prod__wrapper">
-                    <ul class="menu__product__list">
-                        <li id="furniture"><a href="#">NEW FURNITURE</a></li>
-                        <li><a href="#">BED</a></li>
-                        <li><a href="#">CHAIR</a></li>
-                        <li><a href="#">SOFA</a></li>
-                        <li><a href="#">TABLE</a></li>
-                        <li><a href="#">DINING</a></li>
-                    </ul>
-                </div>
+                        <ul class="menu__product__list">
+                            <li class="__title"><a href="#">NEW FURNITURE</a></li>
+                            <li><a href="#">BED</a></li>
+                            <li><a href="#">CHAIR</a></li>
+                            <li><a href="#">SOFA</a></li>
+                            <li><a href="#">TABLE</a></li>
+                            <li><a href="#">DINING</a></li>
+                        </ul>
             </div>
-            <img src="images/line-np.png" alt="" class="line-np" />
             <div class="arrow__wrapper">
                 <div class="arrow"></div>
                 <div class="arrow"></div>
@@ -304,7 +300,16 @@
                                 <div class="sale__wrapper">
                                     <span class="sale">sale</span></div>
                                 <img src="images/prod-1.jpg" alt="" class="card__img" />
+
                                 <div class="card__info">
+                                    <div class="onhover__menu">
+                                        <a href="#">
+                                            <p class="menu__view">Quick View</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="menu__add"><i class="fas fa-shopping-bag"></i> Add to Cart</p>
+                                        </a>
+                                    </div>
                                     <p class="card__name">Aenean Ru Bristique</p>
                                     <div class="card__star">
                                         <ul class="__list">
@@ -371,6 +376,8 @@
                     <li class="__list--item">
                         <div class="card">
                             <div class="card__wrapper">
+                                <div class="sale__wrapper">
+                                    <span class="sale">sale</span></div>
                                 <img src="images/prod-3.jpg" alt="" class="card__img" />
                                 <div class="card__info">
                                     <p class="card__name">Aenean Ru Bristique</p>
@@ -406,6 +413,8 @@
                     <li class="__list--item">
                         <div class="card">
                             <div class="card__wrapper">
+                                <div class="sale__wrapper">
+                                    <span class="sale">sale</span></div>
                                 <img src="images/prod-4.jpg" alt="" class="card__img" />
                                 <div class="card__info">
                                     <p class="card__name">Aenean Ru Bristique</p>
@@ -476,6 +485,8 @@
                     <li class="__list--item">
                         <div class="card">
                             <div class="card__wrapper">
+                                <div class="sale__wrapper">
+                                    <span class="sale">sale</span></div>
                                 <img src="images/prod-6.jpg" alt="" class="card__img" />
                                 <div class="card__info">
                                     <p class="card__name">Aenean Ru Bristique</p>
@@ -510,6 +521,8 @@
                     <li class="__list--item">
                         <div class="card">
                             <div class="card__wrapper">
+                                <div class="sale__wrapper">
+                                    <span class="sale">sale</span></div>
                                 <img src="images/prod-7.jpg" alt="" class="card__img" />
                                 <div class="card__info">
                                     <p class="card__name">Aenean Ru Bristique</p>
@@ -581,21 +594,52 @@
             </div>
         </div>
         <!-- Furniture Gallery -->
-        <div class="second__wrapper">
-            <div class="furniture">
-                <div class="furn__container">
-                    <p class="furn__title">FURNITURE GALLERY</p>
-                    <img src="images/furniture-line.png" alt="" class="furn__line" />
-                </div>
-            </div>
-            <div class="ads__gallery">
-                <p class="ads__text">FROM <span class="price--green">$50.80</span
-            ><span class="price__text">Bedroom Bed</span></p>
+        <div class="gallery__wrapper">
+    <div class="furniture">
+        <p class="__title">FURNITURE GALLERY</p>
+        <div class="furniture__container">
 
-                <div class="btn__green">
-                    <span class="text--green">SHOP NOW</span>
-                </div>
+
+        </div>
+    </div>
+<div class="ads__container">
+    <div class="ads__gallery">
+        <img src="/images/ads__bedroom.jpg" alt="" class="ads__bed__img"></div>
+    <div class="ads__text__body">
+        <p class="ads__text">FROM
+            <span class="price--green">$50.80</span>
+            <span class="price__text">Bedroom Bed</span>
+        </p>
+
+        <div class="btn__green">
+            <span class="text--green">SHOP NOW</span>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+
+
+        <!-- testimonial -->
+        <div class="testimonial">
+            <div class="testimonial__wrapper">
+                <p class="__title">CLIENT FEEDBACK</p>
+        <div class="arrow__wrapper">
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+        </div>
+        <div class="test__body">
+            <span class="quote"><i class="fas fa-quote-right"></i></span>
+            <p class="body__text">Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+                diam
+                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.</p>
+            <div class="profile">
+                <div class="profile--left"><img src="/images/profile.jpg" alt="" class="profile__img"></div>
+                <div class="profile--right"><span class="name">John Smith</span><span class="title">Furniture Client</span></div>
             </div>
+        </div>
+        </div>
         </div>
     </main>
     <!-- footer -->
@@ -654,31 +698,24 @@
 
                     </ul>
                 </div>
-
-
                 <div class="card__payments">
                     <ul>
                         <li class="payments__link">
-                            <a href="#"><img src="/images/icon-visa.png" alt=""></a>
+                            <a href="#"><img src="/images/icon-visa.png" alt="" class="payment__img"></a>
                         </li>
                         <li class="payments__link">
-                            <a href="#"><img src="/images/icon-master.png" alt=""></a>
+                            <a href="#"><img src="/images/icon-master.png" alt="" class="payment__img"></a>
                         </li>
                         <li class="payments__link">
-                            <a href="#"><img src="/images/icon-discover.png" alt=""></a>
+                            <a href="#"><img src="/images/icon-discover.png" alt="" class="payment__img"></a>
                         </li>
                         <li class="payments__link">
-                            <a href="#"><img src="/images/icon-amex.png" alt=""></a>
+                            <a href="#"><img src="/images/icon-amex.png" alt="" class="payment__img"></a>
                         </li>
                         <li class="payments__link">
-                            <a href="#"><img src="/images/icon-paypal.png" alt=""></a>
+                            <a href="#"><img src="/images/icon-paypal.png" alt="" class="payment__img"></a>
                         </li>
                     </ul>
-                    <!-- <a href="#"><img src="/images/icon-visa.png" alt=""></a>
-                    <a href="#"><img src="/images/icon-master.png" alt=""></a>
-                    <a href="#"><img src="/images/icon-discover.png" alt=""></a>
-                    <a href="#"><img src="/images/icon-amex.png" alt=""></a>
-                    <a href="#"><img src="/images/icon-paypal.png" alt=""></a> -->
                 </div>
             </div>
         </div>

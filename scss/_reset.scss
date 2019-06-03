@@ -152,6 +152,9 @@ body {
 a {
   text-decoration: none;
 }
-ul li {
-  display: inline-block;
+ul {
+  list-style-type: none;
+  li {
+    display: inline-block;
+  }
 }

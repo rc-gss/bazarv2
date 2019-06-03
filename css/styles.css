@@ -140,8 +140,10 @@ body {
 a {
   text-decoration: none; }
 
-ul li {
-  display: inline-block; }
+ul {
+  list-style-type: none; }
+  ul li {
+    display: inline-block; }
 
 body {
   font-family: ffPoppins-regular, "Poppins", sans-serif; }
@@ -201,8 +203,7 @@ a {
     .topHeader .topnav--right .topnav__list--right .menu__list ul {
       display: none;
       position: absolute;
-      padding: 6px;
-      list-style-type: none; }
+      padding: 6px; }
   .topHeader .menu__link {
     color: #fff; }
     .topHeader .menu__link .fa-caret-down {
@@ -256,6 +257,15 @@ a {
         .bottomHeader .cart__container .cart__content .text__wrapper .cart__items--text {
           margin-left: 8px;
           color: #fff; }
+
+.__title {
+  font-size: 20px;
+  border-bottom: 3px solid gray;
+  color: orange;
+  font-weight: 600;
+  padding-bottom: 10px;
+  position: relative;
+  font-family: "Poppins"; }
 
 .menubar {
   display: flex;
@@ -590,46 +600,47 @@ a {
 .newproducts {
   margin-top: 60px; }
   .newproducts .container__products {
-    display: flex; }
-    .newproducts .container__products span {
-      font-weight: bold;
-      font-size: 20px;
-      color: #d58e32; }
-    .newproducts .container__products .prod__wrapper {
-      margin-left: 200px; }
-      .newproducts .container__products .prod__wrapper .product__list li {
-        position: relative;
-        list-style-type: none;
-        display: inline-block;
-        margin-left: 20px;
-        padding-bottom: 10px; }
-        .newproducts .container__products .prod__wrapper .product__list li:before {
-          transition: 300ms;
-          content: "";
-          position: absolute;
-          background-color: #d58e32;
-          height: 3px;
-          bottom: 0px;
-          transition: height 0.4s ease; }
-        .newproducts .container__products .prod__wrapper .product__list li:hover:before {
-          width: 100%;
-          bottom: 0; }
-        .newproducts .container__products .prod__wrapper .product__list li a {
-          color: #2a2a2a;
-          font-size: 18px;
-          font-weight: bold; }
-  .newproducts .line-np {
-    width: calc(100% - 15vh); }
-  .newproducts .arrow {
-    content: "";
-    border-radius: 80%;
-    background-color: #e2e2e2;
-    height: 15px;
-    width: 15px;
-    margin-right: 5px;
-    float: right; }
-    .newproducts .arrow:hover {
-      background-color: #d58e32; }
+    display: flex;
+    margin-left: 200px; }
+    .newproducts .container__products .menu__product__list .__title {
+      left: 0; }
+    .newproducts .container__products .menu__product__list li {
+      position: relative;
+      list-style-type: none;
+      display: inline-block;
+      margin-left: 20px;
+      padding-bottom: 10px; }
+      .newproducts .container__products .menu__product__list li:before {
+        transition: 300ms;
+        content: "";
+        position: absolute;
+        background-color: #d58e32;
+        height: 3px;
+        bottom: 0px;
+        transition: height 0.4s ease; }
+      .newproducts .container__products .menu__product__list li:hover:before {
+        width: 100%;
+        bottom: 0; }
+      .newproducts .container__products .menu__product__list li a {
+        color: #2a2a2a;
+        font-size: 18px;
+        font-weight: bold; }
+
+.line-np {
+  width: calc(100% - 15vh); }
+
+.arrow {
+  content: "";
+  border-radius: 80%;
+  background-color: #e2e2e2;
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+  float: right; }
+  .arrow:hover {
+    background-color: #d58e32; }
+  .arrow:active {
+    background-color: #d58e32; }
 
 .product__container .product__list .__list--item {
   display: inline-block;
@@ -647,8 +658,8 @@ a {
     background-color: #d58e32; }
   .card__wrapper .sale__wrapper {
     position: absolute;
-    width: 60px;
-    height: 30px;
+    width: 40px;
+    height: 20px;
     border-radius: 50%;
     background-color: #2a2a2a;
     left: 0;
@@ -668,88 +679,204 @@ a {
     margin-top: 15px;
     position: relative;
     text-align: center; }
-    .card__wrapper .card__info .card__name {
+    .card__wrapper .card__info .onhover__menus .onhover__menu {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      /* padding: 13px 8px; */
+      position: absolute;
+      top: -70px; }
+      .card__wrapper .card__info .onhover__menus .onhover__menu .menu__view {
+        background-color: black;
+        padding: 13px 8px; }
+      .card__wrapper .card__info .onhover__menus .onhover__menu .menu__add {
+        background-color: black;
+        padding: 13px 8px; }
+    .card__wrapper .card__info .onhover__menus .card__name {
       font-size: 16px; }
-    .card__wrapper .card__info .card__star {
+    .card__wrapper .card__info .onhover__menus .card__star {
       text-align: center;
       margin: 5px; }
-      .card__wrapper .card__info .card__star .checked {
+      .card__wrapper .card__info .onhover__menus .card__star .checked {
         color: transparent;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black; }
-    .card__wrapper .card__info .card__line {
+    .card__wrapper .card__info .onhover__menus .card__line {
       display: block;
       margin: 15px auto 0px; }
-    .card__wrapper .card__info .card__icons {
+    .card__wrapper .card__info .onhover__menus .card__icons {
       padding: 10px 0px 0px 10px; }
-      .card__wrapper .card__info .card__icons .icons__list {
+      .card__wrapper .card__info .onhover__menus .card__icons .icons__list {
         float: left;
         padding: 10px;
         border: 2px solid #000000;
         margin: 5px; }
-      .card__wrapper .card__info .card__icons .icons__list__price {
+      .card__wrapper .card__info .onhover__menus .card__icons .icons__list__price {
         float: right; }
-        .card__wrapper .card__info .card__icons .icons__list__price .card__price {
+        .card__wrapper .card__info .onhover__menus .card__icons .icons__list__price .card__price {
           margin: 15px 12px 0px 0px; }
-          .card__wrapper .card__info .card__icons .icons__list__price .card__price .card__oldprice {
+          .card__wrapper .card__info .onhover__menus .card__icons .icons__list__price .card__price .card__oldprice {
             font-size: 14px;
             color: gray;
             text-decoration: line-through;
             text-decoration-color: #000; }
-          .card__wrapper .card__info .card__icons .icons__list__price .card__price .card__newprice {
+          .card__wrapper .card__info .onhover__menus .card__icons .icons__list__price .card__price .card__newprice {
             background-color: #2a2a2a;
             color: white;
             padding: 12px;
             font-size: 18px;
             padding: 10px; }
-
-footer {
-  height: 332px; }
-  footer .footer--top {
-    background-color: #363636; }
-    footer .footer--top .footer__wrapper--top {
-      max-width: 1140px;
-      margin: 0px auto;
-      padding: 60px 0px; }
-      footer .footer--top .footer__wrapper--top .__list__wrapper {
-        width: 153px;
-        margin-right: 120px;
-        display: inline-block; }
-        footer .footer--top .footer__wrapper--top .__list__wrapper ul li {
-          display: block; }
-          footer .footer--top .footer__wrapper--top .__list__wrapper ul li h3 {
-            font-size: 22px;
-            line-height: 30px;
-            color: #ffffff;
-            margin-bottom: 37px;
+  .card .gallery__wrapper {
+    display: inline-flex; }
+    .card .gallery__wrapper .furniture {
+      margin-right: 30px; }
+      .card .gallery__wrapper .furniture .__title {
+        font-size: 20px;
+        border-bottom: 3px solid gray;
+        color: orange;
+        font-weight: 600;
+        padding-bottom: 10px;
+        position: relative;
+        font-family: "Poppins";
+        width: 555px; }
+        .card .gallery__wrapper .furniture .__title:before {
+          background-color: orange;
+          left: 0;
+          bottom: -3px;
+          width: 44px;
+          height: 3px;
+          content: ""; }
+      .card .gallery__wrapper .furniture .furniture__container {
+        width: 555px;
+        height: 540px;
+        background-color: black; }
+    .card .gallery__wrapper .ads__container {
+      position: relative; }
+      .card .gallery__wrapper .ads__container .ads__bed__img {
+        width: 550px;
+        height: 600px; }
+      .card .gallery__wrapper .ads__container .ads__text__body {
+        position: absolute;
+        top: 0;
+        padding: 68px; }
+        .card .gallery__wrapper .ads__container .ads__text__body .ads__text {
+          font-size: 18px;
+          width: 340px; }
+          .card .gallery__wrapper .ads__container .ads__text__body .ads__text .price--green {
+            font-size: 48px;
+            color: #79ae30;
             font-weight: bold; }
-          footer .footer--top .footer__wrapper--top .__list__wrapper ul li a {
-            font-size: 14px;
-            line-height: 30px;
-            color: #a9a9a9; }
-      footer .footer--top .footer__wrapper--top .card__payments {
-        margin-top: 30px;
-        margin-right: 40px;
-        float: right; }
-        footer .footer--top .footer__wrapper--top .card__payments .payments__link {
-          display: inline; }
-          footer .footer--top .footer__wrapper--top .card__payments .payments__link a {
-            margin-right: 10px; }
-  footer .footer-bottom {
-    background-color: #2a2a2a; }
-    footer .footer-bottom .footer__wrapper--bottom {
-      max-width: 1140px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 40px; }
-      footer .footer-bottom .footer__wrapper--bottom .icons__social {
-        float: right; }
-        footer .footer-bottom .footer__wrapper--bottom .icons__social .social__list li {
-          margin-right: 25px;
+          .card .gallery__wrapper .ads__container .ads__text__body .ads__text .price__text {
+            font-size: 48px;
+            color: #d58e32;
+            display: flex;
+            font-weight: bold;
+            margin-top: 15px; }
+        .card .gallery__wrapper .ads__container .ads__text__body .btn__green {
+          width: 130px;
+          padding: 20px;
+          border-radius: 8%;
+          background-color: #79ae30;
+          text-align: center;
+          margin-top: 30%; }
+          .card .gallery__wrapper .ads__container .ads__text__body .btn__green .text--green {
+            color: #fff;
+            font-size: 14px; }
+  .card .testimonial__wrapper .__title {
+    font-size: 20px;
+    border-bottom: 3px solid gray;
+    color: orange;
+    font-weight: 600;
+    padding-bottom: 10px;
+    position: relative;
+    font-family: "Poppins";
+    width: 1050px; }
+    .card .testimonial__wrapper .__title:before {
+      background-color: orange;
+      left: 0;
+      bottom: -3px;
+      width: 44px;
+      height: 3px;
+      content: ""; }
+  .card .testimonial__wrapper .test__body {
+    padding: 30px 0 60px 0;
+    text-align: center; }
+    .card .testimonial__wrapper .test__body .quote {
+      width: 23px; }
+    .card .testimonial__wrapper .test__body .body__text {
+      width: 960px;
+      margin-top: 30px;
+      line-height: 25px; }
+    .card .testimonial__wrapper .test__body .profile {
+      margin-top: 35px;
+      display: inline-flex; }
+      .card .testimonial__wrapper .test__body .profile .profile--left {
+        margin-right: 20px; }
+        .card .testimonial__wrapper .test__body .profile .profile--left .profile__img {
+          width: 60px;
+          height: 52px; }
+      .card .testimonial__wrapper .test__body .profile .profile--right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        .card .testimonial__wrapper .test__body .profile .profile--right .name {
+          font-size: 16px; }
+        .card .testimonial__wrapper .test__body .profile .profile--right .title {
+          font-size: 14px; }
+  .card footer {
+    height: 332px; }
+    .card footer .footer--top {
+      padding: 60px;
+      background-color: #363636; }
+      .card footer .footer--top .footer__wrapper--top {
+        max-width: 1140px;
+        margin: 0px auto;
+        padding-bottom: 55px; }
+        .card footer .footer--top .footer__wrapper--top .__list__wrapper {
+          width: 153px;
+          margin-right: 120px;
+          display: inline-block; }
+          .card footer .footer--top .footer__wrapper--top .__list__wrapper ul li {
+            display: block; }
+            .card footer .footer--top .footer__wrapper--top .__list__wrapper ul li h3 {
+              font-size: 22px;
+              line-height: 30px;
+              color: #ffffff;
+              margin-bottom: 37px;
+              font-weight: bold; }
+            .card footer .footer--top .footer__wrapper--top .__list__wrapper ul li a {
+              font-size: 14px;
+              line-height: 30px;
+              color: #a9a9a9; }
+        .card footer .footer--top .footer__wrapper--top .card__payments {
+          margin-top: 30px;
+          margin-right: 40px;
+          float: right; }
+          .card footer .footer--top .footer__wrapper--top .card__payments .payments__link {
+            display: inline; }
+            .card footer .footer--top .footer__wrapper--top .card__payments .payments__link a {
+              margin-right: 10px; }
+              .card footer .footer--top .footer__wrapper--top .card__payments .payments__link a .payment__img {
+                box-shadow: 0px 8px 10px #4a4a4a; }
+    .card footer .footer--bottom {
+      background-color: #2a2a2a; }
+      .card footer .footer--bottom .footer__wrapper--bottom {
+        max-width: 1140px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 40px; }
+        .card footer .footer--bottom .footer__wrapper--bottom .copyright {
           color: #a9a9a9; }
-          footer .footer-bottom .footer__wrapper--bottom .icons__social .social__list li:hover {
-            color: #d58e32; }
-          footer .footer-bottom .footer__wrapper--bottom .icons__social .social__list li .social__image {
-            width: 20px; }
+        .card footer .footer--bottom .footer__wrapper--bottom .icons__social {
+          float: right; }
+          .card footer .footer--bottom .footer__wrapper--bottom .icons__social .social__list li {
+            margin-right: 25px;
+            color: #a9a9a9; }
+            .card footer .footer--bottom .footer__wrapper--bottom .icons__social .social__list li a .fab {
+              color: #a9a9a9; }
+              .card footer .footer--bottom .footer__wrapper--bottom .icons__social .social__list li a .fab:hover {
+                color: #d58e32; }
 
 /*# sourceMappingURL=styles.css.map */
