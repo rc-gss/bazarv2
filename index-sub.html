@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/977cc5f08e.js"></script>
 	<meta charset="UTF-8">
 	<style>
@@ -12,12 +13,6 @@
 
 * {
   box-sizing: inherit;
-  &:before {
-    @extend *;
-  }
-  &:after {
-    @extend *;
-  }
 }
 
 body {
@@ -29,11 +24,12 @@ a {
   text-decoration: none;
 }
 ul {
-  list-style-type: none;
-  li {
+  list-style-type: none;}
+ul li {
     display: inline-block;
+        margin-right: 30px;
   }
-}
+
 
 /* furniture */
 .furniture{
@@ -55,7 +51,7 @@ ul {
 .post {
         width: 360px;
     height: 540px;
-    background-color: cadetblue;
+    
     position: relative;
 }
 .post__container ul {
@@ -81,6 +77,13 @@ ul {
     background-color: white;
 }
 
+.post__info:hover .post__title {
+    color: #d58e32;
+}
+
+.post__info:hover .post__more a{
+  background-color: #d58e32;
+}
 .post__info--top{
       margin: 27px 20px 0px;
     display: flex;
@@ -108,7 +111,7 @@ i.fas.fa-comments {
 .post__title {
     font-size: 16px;
     font-weight: 600;
-    color: orange;
+    color: #2a2a2a;
 }
 .post__text {
     font-size: 14px;
@@ -124,36 +127,33 @@ p.post__more {
     text-decoration: none;
     color: white;
     padding: 15px 40px;
-    background-color: #d58e32;
+    background-color: #2a2a2a;
 }
 
 
 /* slider - blog */
 .blog__slider {
-    width: 100%;
-    height: 140px;
-    background-color: antiquewhite;
+      margin-top: 60px;
+   
+       padding: 23px 0px;
+   
     border-top: 2px solid gray;
     border-bottom: 2px solid gray;
 }
 
-.blog__slider {
-    width: 100%;
-    height: 140px;
-    background-color: antiquewhite;
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;}
 
     .blog__slider__btn {
     display: flex;
-    margin: 23px 0;}
-    .slider--left {
-    margin-right: 30px;
-    width: 33px;
-    height: 92px;
-    /* text-align: center; */
-    /* padding: 40px 15px; */
+    }
+
+    .slider--left, .slider--right {
+   
+     padding: 50px 15px; 
     background-color: black;
+}
+
+.slider--left:hover span, .slider--right:hover span{
+  color: #e0a38e;
 }
 span {
     /* background-color: black; */
@@ -162,14 +162,10 @@ span {
     text-align: ceneter;
 }
 
-.slider--right {
-    margin-left: 30px;
-    width: 33px;
-    height: 92px;
-    /* text-align: center; */
-    /* padding: 40px 15px; */
-    background-color: black;
+img.__slider__img {
+    border: 1px solid gray;
 }
+
 	</style>
 </head>
 <body>
@@ -212,25 +208,57 @@ span {
         </div>
       </div>
  </li>
- <li></li>
-<li></li>
+ <li>
+                         <div class="post">
+        <img src="images/prod-8.jpg" alt="" class="post__img">
+        <div class="post__info">
+          <div class="post__info--top">
+            <p class="post__date"><i class="fas fa-calendar-alt"></i> 15 JAN 2016</p>
+          <p class="post__comment"><i class="fas fa-comments"></i>4 Comments</p>
+          </div>
+            <p class="post__title">Products That Fight Static</p>
+            <p class="post__text">
+                Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+            </p>
+            <p class="post__more"><a href="#">Read More</a></p>
+        </div>
+      </div>
+ </li>
+<li>
+                        <div class="post">
+        <img src="images/prod-8.jpg" alt="" class="post__img">
+        <div class="post__info">
+          <div class="post__info--top">
+            <p class="post__date"><i class="fas fa-calendar-alt"></i> 15 JAN 2016</p>
+          <p class="post__comment"><i class="fas fa-comments"></i>4 Comments</p>
+          </div>
+            <p class="post__title">Products That Fight Static</p>
+            <p class="post__text">
+                Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+            </p>
+            <p class="post__more"><a href="#">Read More</a></p>
+        </div>
+      </div>
+</li>
  </ul>
                 </div>
             </div>
 
 <div class="blog__slider">
   <div class="blog__slider__btn">
-      <div class="slider--left" onclick="moveSlide(-1)">
+      <div class="slider--left" onclick="slider('next')">
          <span>&#10094;</span>
       </div>
       <div class="blog__slider__img">
-        <img src="images/brand-1.png" alt="" class="__slider__img">
-        <img src="images/brand-2.png" alt="" class="__slider__img">
-        <img src="images/brand-3.png" alt="" class="__slider__img">
-        <img src="images/brand-4.png" alt="" class="__slider__img">
-        <img src="images/brand-5.png" alt="" class="__slider__img">
+        <ul id="img__list">
+          <li><img src="images/brand-1.png" alt="" class="__slider__img"></li>
+          <li><img src="images/brand-2.png" alt="" class="__slider__img"></li>
+          <li> <img src="images/brand-3.png" alt="" class="__slider__img"></li>
+          <li><img src="images/brand-4.png" alt="" class="__slider__img"></li>
+          <li> <img src="images/brand-5.png" alt="" class="__slider__img"></li>
+        </ul>
       </div>
-      <div class="slider--right" onclick="moveSlide(1)">
+      <div class="slider--right" onclick="slider('prev')">
         <span>&#10095;</span>
       </div>
   </div>
@@ -238,5 +266,43 @@ span {
 
     </div>
   </div>
+
+ 
+    
+   <script>
+     function slider(container, nav){
+  this.container=container;
+  this.nav=nav.hide(); // This will assign 'nav' from parameters to 'nav' of current slider instance. It uses method chaining.
+  this.imgs=this.container.find('.slides'); // Returns jQuery object containing all matched elements.
+    console.log('Value of this.imgs is : '+this.imgs);
+  this.width=this.imgs[0].width;
+  console.log('Value of width is : '+this.width);
+  this.imgLen=this.imgs.length; // Returns the total number of sliding elements.
+  /*  Initialize the "current" counter. 
+    This counter keeps track of the index of current slide in the unordered list of elements. 
+    This will be used for calculating the required displacement.
+  */
+  this.current=0; 
+}
+
+// This method will apply the needed animation and displacement.
+slider.prototype.transition=function(coords){
+  this.container.animate({
+    'margin-left': coords || -(this.current*this.width+35*this.current) // First element is multiplied by Zero. The number 35 is the actual gap between two slides.
+  },500);
+};
+
+// This method will set the "current" counter to next position.
+slider.prototype.setCurrentPos=function(dir){
+  var pos=this.current;
+  console.log('Value of this.value is : '+dir);
+  // It'll check which button is pressed and accordingly increments or decrements the 'pos' variable.
+  pos+= ~~(dir=='next') || -1; // You can use alternate "Math.floor()" method instead of double tilde (~~) operator.
+  this.current=(pos<0)?this.imgLen-3: pos%(this.imgLen-2);
+  console.log(this.current);
+  
+}; 
+   </script>
+  
 </body>
 </html>
