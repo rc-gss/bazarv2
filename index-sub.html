@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://kit.fontawesome.com/977cc5f08e.js"></script>
+	<meta charset="UTF-8">
+	<style>
+		html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: inherit;
+  &:before {
+    @extend *;
+  }
+  &:after {
+    @extend *;
+  }
+}
+
+body {
+  height: 100vh;
+ 
+  
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  li {
+    display: inline-block;
+  }
+}
+
+/* furniture */
+.furniture{
+	    max-width: 1140px;
+    margin: 0 auto;
+}
+		.furniture__container{
+			width: 555px;
+			height:541px;
+			background-color: gray ;
+		}
+
+
+		
+		/* blog */
+.blog__title{
+    
+}
+.post {
+        width: 360px;
+    height: 540px;
+    background-color: cadetblue;
+    position: relative;
+}
+.post__container ul {
+    list-style-type: none;
+}
+.post__container ul li{
+   display: inline-block;
+}
+.post__wrapper--img{
+    position: relative;
+}
+.post__img{
+    width: 360px;
+    height: 290px;
+}
+.post__info {
+    width: 300px;
+    /* height: 315px; */
+    text-align: left;
+    position: absolute;
+    top: 230px;
+    margin: 0px 30px;
+    background-color: white;
+}
+
+.post__info--top{
+      margin: 27px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.post__date {
+    color: #676767;
+    font-size: 13px;
+    display: flex;
+   
+  
+}
+i.fas.fa-calendar-alt {
+    margin-right: 10px;
+}
+p.post__comment {
+    color: #676767;
+    font-size: 13px;
+   
+}
+i.fas.fa-comments {
+    color: black;
+    margin-right: 10px;
+}
+.post__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: orange;
+}
+.post__text {
+    font-size: 14px;
+    color: #676767;
+    line-height: 24px;
+}
+
+p.post__more {
+    text-align: center;
+    margin-top: 67px;
+}
+.post__more a{
+    text-decoration: none;
+    color: white;
+    padding: 15px 40px;
+    background-color: #d58e32;
+}
+	</style>
+</head>
+<body>
+	<div class="furniture">
+                <p class="__title">FURNITURE GALLERY</p>
+                <div class="furniture__container">
+
+                </div>
+    </div>
+
+    <div class="blog">
+    	<div class="blog__container">
+    		
+    	</div>
+    </div>
+    <div class="blog">
+       <p class="__title">LATEST BLOG</p>
+       <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="blog__container">
+            <div class="blog__post">
+                    <ul>
+                        <li> 
+                      <div class="post">
+        <img src="images/prod-8.jpg" alt="" class="post__img">
+        <div class="post__info">
+          <div class="post__info--top">
+            <p class="post__date"><i class="fas fa-calendar-alt"></i> 15 JAN 2016</p>
+          <p class="post__comment"><i class="fas fa-comments"></i>4 Comments</p>
+          </div>
+            <p class="post__title">Products That Fight Static</p>
+            <p class="post__text">
+                Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+            </p>
+            <p class="post__more"><a href="#">Read More</a></p>
+        </div>
+      </div>
+ </li>
+ <li></li>
+<li></li>
+ </ul>
+                </div>
+            </div>
+    </div>
+  </div>
+</body>
+</html>
