@@ -126,12 +126,58 @@ p.post__more {
     padding: 15px 40px;
     background-color: #d58e32;
 }
+
+
+/* slider - blog */
+.blog__slider {
+    width: 100%;
+    height: 140px;
+    background-color: antiquewhite;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+.blog__slider {
+    width: 100%;
+    height: 140px;
+    background-color: antiquewhite;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;}
+
+    .blog__slider__btn {
+    display: flex;
+    margin: 23px 0;}
+    .slider--left {
+    margin-right: 30px;
+    width: 33px;
+    height: 92px;
+    /* text-align: center; */
+    /* padding: 40px 15px; */
+    background-color: black;
+}
+span {
+    /* background-color: black; */
+    /* padding: 40px 15px; */
+    color: white;
+    text-align: ceneter;
+}
+
+.slider--right {
+    margin-left: 30px;
+    width: 33px;
+    height: 92px;
+    /* text-align: center; */
+    /* padding: 40px 15px; */
+    background-color: black;
+}
 	</style>
 </head>
 <body>
 	<div class="furniture">
                 <p class="__title">FURNITURE GALLERY</p>
                 <div class="furniture__container">
+
+
 
                 </div>
     </div>
@@ -146,6 +192,7 @@ p.post__more {
        <div class="arrow"></div>
             <div class="arrow"></div>
             <div class="arrow"></div>
+            
             <div class="blog__container">
             <div class="blog__post">
                     <ul>
@@ -170,6 +217,25 @@ p.post__more {
  </ul>
                 </div>
             </div>
+
+<div class="blog__slider">
+  <div class="blog__slider__btn">
+      <div class="slider--left" onclick="moveSlide(-1)">
+         <span>&#10094;</span>
+      </div>
+      <div class="blog__slider__img">
+        <img src="images/brand-1.png" alt="" class="__slider__img">
+        <img src="images/brand-2.png" alt="" class="__slider__img">
+        <img src="images/brand-3.png" alt="" class="__slider__img">
+        <img src="images/brand-4.png" alt="" class="__slider__img">
+        <img src="images/brand-5.png" alt="" class="__slider__img">
+      </div>
+      <div class="slider--right" onclick="moveSlide(1)">
+        <span>&#10095;</span>
+      </div>
+  </div>
+</div>
+
     </div>
   </div>
 </body>
