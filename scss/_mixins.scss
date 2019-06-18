@@ -13,6 +13,7 @@
   color: gray;
   text-decoration: line-through;
   text-decoration-color: #000;
+  margin-right: 5px;
 }
 @mixin new-priceTag() {
   background-color: #2a2a2a;
@@ -29,8 +30,11 @@
   padding-bottom: 10px;
   position: relative;
   font-family: "Poppins";
+  width: 1050px;
 }
 @mixin line-divider-before() {
+  display: block;
+  position: absolute;
   background-color: orange;
   left: 0;
   bottom: -3px;

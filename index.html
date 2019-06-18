@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/977cc5f08e.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>BAZAR v2</title>
+    <title>BAZAR</title>
 </head>
 
 <body>
@@ -78,6 +78,7 @@
     </header>
     <main>
         <div class="menubar">
+            <div class="menubar__wrapper">
             <div class="menubar__container--left">
                 <div class="category__container">
                     <img class="img__category" src="images/category.png" alt="" />
@@ -105,8 +106,10 @@
                     <li><a href="#">BLOG</a></li>
                 </ul>
             </div>
+            </div>
         </div>
         <!-- deal starts -->
+        <div class="main__wrapper">
         <div class="wrapper">
             <div class="deals">
                 <div class="deals--top">
@@ -173,27 +176,26 @@
                     <img class="slider__img" src="images/slider-3.jpg" />
                     <div class="__text__wrapper">
                         <span class="slider__text">INDOOR</span><span class="slider__text">FURNITURE</span>
-                        <span class="slider__text">SAVE UP TO 50% OF ALL FURNITURE</span>
+                        <span class="slider__text text__save">SAVE UP TO 50% OF ALL FURNITURE</span>
                         <div class="btn__shop">
                             <span class="btn__text"><a href="#">SHOP NOW</a></span>
                         </div>
                     </div>
                     <div class="slider__btn">
                         <div class="slider--left" onclick="moveSlide(-1)">
-                            <span>&#10094;</span>
+                            &#10094;</span>
                         </div>
-                        <div class="slider--right" onclick="moveSlide(1)">
-                            <span>&#10095;</span>
+                        <div class="slider--right" onclick="moveSlide(1)">&#10095;
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- shipping, cx care, refund, discount -->
-        <div class="options">
+         <div class="options">
             <div class="options__container">
                 <ul class="options__list">
-                    <li class="options_ _shipping">
+                    <li class="options__box">
                         <div class="text__container">
                             <div class="icon__container">
                                 <div class="icon__inner">
@@ -206,39 +208,41 @@
                             </div>
                         </div>
                     </li>
-                    <li class="options_ _cxcare">
-                        <div class="icon__container">
-                            <div class="icon__inner icon__cxcare">
-                                <i class="fas fa-headphones fa-lg"></i>
-                            </div>
-                        </div>
+                    <li class="options__box">
                         <div class="text__container">
+                            <div class="icon__container">
+                                <div class="icon__inner">
+                                    <i class="fas fa-headphones fa-lg"></i>
+                                </div>
+                            </div>
                             <div class="text__title">
                                 <span class="text__size">24/7 CUSTOMER</span>
                                 <span class="text__size">SUPPORT</span>
                             </div>
                         </div>
                     </li>
-                    <li class="options_ _refund">
+                    <li class="options__box">
+                        <div class="text__container">
                         <div class="icon__container">
-                            <div class="icon__inner icon__refund">
+                            <div class="icon__inner">
                                 <i class="fas fa-undo fa-lg"></i>
                             </div>
                         </div>
-                        <div class="text__container">
+
                             <div class="text__title">
                                 <span class="text__size">MONEY BACK</span>
                                 <span class="text__size">GUARANTEE</span>
                             </div>
                         </div>
                     </li>
-                    <li class="options_ _discount">
+                    <li class="options__box">
+                        <div class="text__container">
                         <div class="icon__container">
-                            <div class="icon__inner icon__discount">
+                            <div class="icon__inner">
                                 <i class="fas fa-bullhorn fa-lg"></i>
                             </div>
                         </div>
-                        <div class="text__container">
+
                             <div class="text__title">
                                 <span class="text__size">MEMBER DISCOUNT</span>
                                 <span class="text__size">FIRST ORDER</span>
@@ -260,25 +264,24 @@
             </div>
         </div>
         <!-- new products -->
-        <div class="newproducts">
-            <div class="container__products">
-                <ul class="menu__product__list">
-                    <li class="__title"><a href="#">NEW FURNITURE</a></li>
-                    <li><a href="#">BED</a></li>
-                    <li><a href="#">CHAIR</a></li>
-                    <li><a href="#">SOFA</a></li>
-                    <li><a href="#">TABLE</a></li>
-                    <li><a href="#">DINING</a></li>
-                </ul>
-            </div>
-            <div class="arrow__wrapper">
+        <div class="np">
+            <div class="np__container">
+                <div class="title__wrapper">
+                    <p class="title__text">New Furniture</p>
+                    <ul class="np__product__list">
+                        <li><a href="#">BED</a></li>
+                        <li><a href="#">CHAIR</a></li>
+                        <li><a href="#">SOFA</a></li>
+                        <li><a href="#">TABLE</a></li>
+                        <li><a href="#">DINING</a></li>
+                    </ul>
+                </div>
                 <div class="arrow"></div>
                 <div class="arrow"></div>
                 <div class="arrow"></div>
             </div>
         </div>
         <!-- product grid -->
-        <div class="product__grid">
             <div class="product__container">
                 <ul class="product__list">
                     <li class="__list--item">
@@ -299,7 +302,6 @@
                                     <p class="card__name">Aenean Ru Bristique</p>
                                     <div class="card__star">
                                         <ul class="__list">
-                                            <li><span class="fa fa-star"></span></li>
                                             <li><span class="fa fa-star"></span></li>
                                             <li><span class="fa fa-star"></span></li>
                                             <li><span class="fa fa-star checked"></span></li>
@@ -330,6 +332,14 @@
                             <div class="card__wrapper">
                                 <img src="images/prod-2.jpg" alt="" class="card__img" />
                                 <div class="card__info">
+                                    <div class="onhover__menu">
+                                        <a href="#">
+                                            <p class="menu__view">Quick View</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="menu__add"><i class="fas fa-shopping-bag"></i> Add to Cart</p>
+                                        </a>
+                                    </div>
                                     <p class="card__name">Aenean Ru Bristique</p>
                                     <div class="card__star">
                                         <ul class="__list">
@@ -365,6 +375,14 @@
                                     <span class="sale">sale</span></div>
                                 <img src="images/prod-3.jpg" alt="" class="card__img" />
                                 <div class="card__info">
+                                    <div class="onhover__menu">
+                                        <a href="#">
+                                            <p class="menu__view">Quick View</p>
+                                        </a>
+                                        <a href="#">
+                                            <p class="menu__add"><i class="fas fa-shopping-bag"></i> Add to Cart</p>
+                                        </a>
+                                    </div>
                                     <p class="card__name">Aenean Ru Bristique</p>
                                     <div class="card__star">
                                         <ul class="__list">
@@ -400,7 +418,14 @@
                                 <div class="sale__wrapper">
                                     <span class="sale">sale</span></div>
                                 <img src="images/prod-4.jpg" alt="" class="card__img" />
-                                <div class="card__info">
+                                <div class="card__info"><div class="onhover__menu">
+                                    <a href="#">
+                                        <p class="menu__view">Quick View</p>
+                                    </a>
+                                    <a href="#">
+                                        <p class="menu__add"><i class="fas fa-shopping-bag"></i> Add to Cart</p>
+                                    </a>
+                                </div>
                                     <p class="card__name">Aenean Ru Bristique</p>
                                     <div class="card__star">
                                         <ul class="__list">
@@ -434,7 +459,14 @@
                         <div class="card">
                             <div class="card__wrapper">
                                 <img src="images/prod-5.jpg" alt="" class="card__img" />
-                                <div class="card__info">
+                                <div class="card__info"><div class="onhover__menu">
+                                    <a href="#">
+                                        <p class="menu__view">Quick View</p>
+                                    </a>
+                                    <a href="#">
+                                        <p class="menu__add"><i class="fas fa-shopping-bag"></i> Add to Cart</p>
+                                    </a>
+                                </div>
                                     <p class="card__name">Aenean Ru Bristique</p>
                                     <div class="card__star">
                                         <ul class="__list">
@@ -469,7 +501,14 @@
                                 <div class="sale__wrapper">
                                     <span class="sale">sale</span></div>
                                 <img src="images/prod-6.jpg" alt="" class="card__img" />
-                                <div class="card__info">
+                                <div class="card__info"><div class="onhover__menu">
+                                    <a href="#">
+                                        <p class="menu__view">Quick View</p>
+                                    </a>
+                                    <a href="#">
+                                        <p class="menu__add"><i class="fas fa-shopping-bag"></i> Add to Cart</p>
+                                    </a>
+                                </div>
                                     <p class="card__name">Aenean Ru Bristique</p>
                                     <div class="card__star">
                                         <ul class="__list">
@@ -504,7 +543,14 @@
                                 <div class="sale__wrapper">
                                     <span class="sale">sale</span></div>
                                 <img src="images/prod-7.jpg" alt="" class="card__img" />
-                                <div class="card__info">
+                                <div class="card__info"><div class="onhover__menu">
+                                    <a href="#">
+                                        <p class="menu__view">Quick View</p>
+                                    </a>
+                                    <a href="#">
+                                        <p class="menu__add"><i class="fas fa-shopping-bag"></i> Add to Cart</p>
+                                    </a>
+                                </div>
                                     <p class="card__name">Aenean Ru Bristique</p>
                                     <div class="card__star">
                                         <ul class="__list">
@@ -538,7 +584,14 @@
                         <div class="card">
                             <div class="card__wrapper">
                                 <img src="images/prod-8.jpg" alt="" class="card__img" />
-                                <div class="card__info">
+                                <div class="card__info"><div class="onhover__menu">
+                                    <a href="#">
+                                        <p class="menu__view">Quick View</p>
+                                    </a>
+                                    <a href="#">
+                                        <p class="menu__add"><i class="fas fa-shopping-bag"></i> Add to Cart</p>
+                                    </a>
+                                </div>
                                     <p class="card__name">Aenean Ru Bristique</p>
                                     <div class="card__star">
                                         <ul class="__list">
@@ -570,12 +623,48 @@
                     </li>
                 </ul>
             </div>
-        </div>
+
         <!-- Furniture Gallery -->
         <div class="gallery__wrapper">
             <div class="furniture">
-                <p class="__title">FURNITURE GALLERY</p>
+                <p class="title__text">FURNITURE GALLERY</p>
                 <div class="furniture__container">
+                    <div class="tab__container">
+                        <ul class="tab__list">
+                            <li class="tab--links">FEATURED</li>
+                            <li class="tab--links">TOP SELLER</li>
+                            <li class="tab--links">SALE OFF</li>
+                            <li class="tab--links">TOP RATED</li>
+                        </ul>
+
+                    </div>
+                    <div class="tab__wrapper">
+                        <div class="tab__img--full">
+                            <img src="/images/gallery-1.jpg" alt="" class="tab__img">
+                        </div>
+                        <div class="tab__thumbnail">
+                            <div class="tab__slider--left" >
+                                <!-- onclick="plusSlides(-1)" -->
+                                <span class="slider__prev">&#10094;</span>
+                            </div>
+                            <div class="tab__img--thumbnail">
+                                <img src="/images/gallery-1.jpg" alt="" class="tab__img--small" onclick="currentSlide(1)">
+                                <img src="/images/gallery-2.jpg" alt="" class="tab__img--small" onclick="currentSlide(2)">
+                                <img src="/images/gallery-3.jpg" alt="" class="tab__img--small" onclick="currentSlide(3)">
+                                <img src="/images/gallery-4.jpg" alt="" class="tab__img--small" onclick="currentSlide(4)">
+
+                                <img src="/images/gallery-5.jpg" alt="" class="tab__img--small" onclick="currentSlide(5)">
+                                <img src="/images/gallery-6.jpg" alt="" class="tab__img--small" onclick="currentSlide(6)">
+
+
+                            </div>
+                            <div class="tab__slider--right" >
+                                <!-- onclick="plusSlides(1)" -->
+                                <span class="slider__next">&#10095;</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             <div class="ads__container">
@@ -592,14 +681,105 @@
                 </div>
             </div>
         </div>
+        <!-- blog -->
+        <div class="blog">
+            <div class="title__wrapper">
+            <p class="title__text">LATEST BLOG</p>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            </div>
+
+            <div class="blog__container">
+                <div class="blog__post">
+                    <ul class="blog__list">
+                        <li>
+                            <div class="post">
+                                <img src="images/prod-8.jpg" alt="" class="post__img">
+                                <div class="post__info">
+                                    <div class="post__info--top">
+                                        <p class="post__date"><i class="fas fa-calendar-alt"></i> 15 JAN 2016</p>
+                                        <p class="post__comment"><i class="fas fa-comments"></i>4 Comments</p>
+                                    </div>
+                                    <p class="post__title">Products That Fight Static</p>
+                                    <p class="post__text">
+                                        Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam
+                                        euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare
+                                        enim.
+                                    </p>
+                                    <p class="post__more"><a href="#">Read More</a></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post">
+                                <img src="images/prod-8.jpg" alt="" class="post__img">
+                                <div class="post__info">
+                                    <div class="post__info--top">
+                                        <p class="post__date"><i class="fas fa-calendar-alt"></i> 15 JAN 2016</p>
+                                        <p class="post__comment"><i class="fas fa-comments"></i>4 Comments</p>
+                                    </div>
+                                    <p class="post__title">Products That Fight Static</p>
+                                    <p class="post__text">
+                                        Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam
+                                        euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare
+                                        enim.
+                                    </p>
+                                    <p class="post__more"><a href="#">Read More</a></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="post">
+                                <img src="images/prod-8.jpg" alt="" class="post__img">
+                                <div class="post__info">
+                                    <div class="post__info--top">
+                                        <p class="post__date"><i class="fas fa-calendar-alt"></i> 15 JAN 2016</p>
+                                        <p class="post__comment"><i class="fas fa-comments"></i>4 Comments</p>
+                                    </div>
+                                    <p class="post__title">Products That Fight Static</p>
+                                    <p class="post__text">
+                                        Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi. Nullam
+                                        euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare
+                                        enim.
+                                    </p>
+                                    <p class="post__more"><a href="#">Read More</a></p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="blog__slider">
+                <div class="blog__slider__btn">
+                    <div class="blog__slider--left">
+                        <span class="slider__text">&#10094;</span>
+                    </div>
+                    <div class="blog__slider__img">
+                        <ul id="img__list">
+                            <li><img src="images/brand-1.png" alt="" class="__slider__img"></li>
+                            <li><img src="images/brand-2.png" alt="" class="__slider__img"></li>
+                            <li> <img src="images/brand-3.png" alt="" class="__slider__img"></li>
+                            <li><img src="images/brand-4.png" alt="" class="__slider__img"></li>
+                            <li> <img src="images/brand-5.png" alt="" class="__slider__img"></li>
+                  </ul>
+                    </div>
+                    <div class="blog__slider--right">
+                        <span class="slider__text">&#10095;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- testimonial -->
         <div class="testimonial">
             <div class="testimonial__wrapper">
-                <p class="__title">CLIENT FEEDBACK</p>
-                <div class="arrow__wrapper">
+                <div class="title__wrapper">
+                <p class="title__text">CLIENT FEEDBACK</p>
+                <!-- <div class="arrow__wrapper"> -->
+                    <div class="arrow" tabIndex()></div>
                     <div class="arrow"></div>
                     <div class="arrow"></div>
-                    <div class="arrow"></div>
+                <!-- </div> -->
                 </div>
                 <div class="test__body">
                     <span class="quote"><i class="fas fa-quote-right"></i></span>
@@ -613,12 +793,14 @@
                 </div>
             </div>
         </div>
+        </div>
+        </div>
     </main>
     <!-- footer -->
     <footer>
         <div class="footer--top">
             <div class="footer__wrapper--top">
-                <div class="__list__wrapper">
+                <div class="footer__list">
                     <ul>
                         <li>
                             <h3>INFORMATION</h3>
@@ -629,7 +811,7 @@
                         <li><a href="#">Online Support</a></li>
                     </ul>
                 </div>
-                <div class="__list__wrapper">
+                <div class="footer__list">
                     <ul>
                         <li>
                             <h3>MY ACCOUNT</h3>
@@ -640,7 +822,7 @@
                         <li><a href="#">Checkout</a></li>
                     </ul>
                 </div>
-                <div class="__list__wrapper">
+                <div class="footer__list">
                     <ul>
                         <li>
                             <h3>INFORMATION</h3>
@@ -651,7 +833,7 @@
                         <li><a href="#">Our Stores</a></li>
                     </ul>
                 </div>
-                <div class="__list__wrapper">
+                <div class="footer__list">
                     <ul>
                         <li>
                             <h3>ORDERS</h3>
