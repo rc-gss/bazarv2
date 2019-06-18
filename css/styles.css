@@ -142,8 +142,6 @@ a {
 
 ul {
   list-style-type: none; }
-  ul li {
-    display: inline-block; }
 
 body {
   font-family: ffPoppins-regular, "Poppins", sans-serif; }
@@ -156,16 +154,17 @@ a {
   color: #ffffff; }
 
 .topHeader {
-  background-image: url("/images/topheader.png");
-  background-repeat: no-repeat;
-  height: 53px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 40px; }
-  .topHeader .topnav--left .topnav__list--left .menu__list,
-  .topHeader .topnav--left .topnav__list--right .menu__list,
+  background: url("/images/topheader.png") no-repeat;
+  background-size: cover;
+  padding: 20px 0; }
+  .topHeader__container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .topHeader .topnav--left .topnav__list--left .menu__list, .topHeader .topnav--left .topnav__list--right .menu__list,
   .topHeader .topnav--right .topnav__list--left .menu__list,
   .topHeader .topnav--right .topnav__list--right .menu__list {
     margin-right: 4px;
@@ -173,34 +172,29 @@ a {
     color: #ffffff;
     cursor: pointer;
     padding: 0px 5px; }
-    .topHeader .topnav--left .topnav__list--left .menu__list:hover,
-    .topHeader .topnav--left .topnav__list--right .menu__list:hover,
+    .topHeader .topnav--left .topnav__list--left .menu__list:hover, .topHeader .topnav--left .topnav__list--right .menu__list:hover,
     .topHeader .topnav--right .topnav__list--left .menu__list:hover,
     .topHeader .topnav--right .topnav__list--right .menu__list:hover {
       background-color: #727070; }
-      .topHeader .topnav--left .topnav__list--left .menu__list:hover ul,
-      .topHeader .topnav--left .topnav__list--right .menu__list:hover ul,
-      .topHeader .topnav--right .topnav__list--left .menu__list:hover ul,
-      .topHeader .topnav--right .topnav__list--right .menu__list:hover ul {
+      .topHeader .topnav--left .topnav__list--left .menu__list:hover .submenu, .topHeader .topnav--left .topnav__list--right .menu__list:hover .submenu,
+      .topHeader .topnav--right .topnav__list--left .menu__list:hover .submenu,
+      .topHeader .topnav--right .topnav__list--right .menu__list:hover .submenu {
         display: block;
         position: absolute;
         width: auto;
         background-color: #434343; }
-        .topHeader .topnav--left .topnav__list--left .menu__list:hover ul li,
-        .topHeader .topnav--left .topnav__list--right .menu__list:hover ul li,
-        .topHeader .topnav--right .topnav__list--left .menu__list:hover ul li,
-        .topHeader .topnav--right .topnav__list--right .menu__list:hover ul li {
-          padding: 3px auto; }
-          .topHeader .topnav--left .topnav__list--left .menu__list:hover ul li:hover,
-          .topHeader .topnav--left .topnav__list--right .menu__list:hover ul li:hover,
-          .topHeader .topnav--right .topnav__list--left .menu__list:hover ul li:hover,
-          .topHeader .topnav--right .topnav__list--right .menu__list:hover ul li:hover {
+        .topHeader .topnav--left .topnav__list--left .menu__list:hover .submenu .submenu__list, .topHeader .topnav--left .topnav__list--right .menu__list:hover .submenu .submenu__list,
+        .topHeader .topnav--right .topnav__list--left .menu__list:hover .submenu .submenu__list,
+        .topHeader .topnav--right .topnav__list--right .menu__list:hover .submenu .submenu__list {
+          padding: 3px 0; }
+          .topHeader .topnav--left .topnav__list--left .menu__list:hover .submenu .submenu__list:hover, .topHeader .topnav--left .topnav__list--right .menu__list:hover .submenu .submenu__list:hover,
+          .topHeader .topnav--right .topnav__list--left .menu__list:hover .submenu .submenu__list:hover,
+          .topHeader .topnav--right .topnav__list--right .menu__list:hover .submenu .submenu__list:hover {
             background-color: #727070;
             padding: 0px 2px; }
-    .topHeader .topnav--left .topnav__list--left .menu__list ul,
-    .topHeader .topnav--left .topnav__list--right .menu__list ul,
-    .topHeader .topnav--right .topnav__list--left .menu__list ul,
-    .topHeader .topnav--right .topnav__list--right .menu__list ul {
+    .topHeader .topnav--left .topnav__list--left .menu__list .submenu, .topHeader .topnav--left .topnav__list--right .menu__list .submenu,
+    .topHeader .topnav--right .topnav__list--left .menu__list .submenu,
+    .topHeader .topnav--right .topnav__list--right .menu__list .submenu {
       display: none;
       position: absolute;
       padding: 6px; }
@@ -214,50 +208,52 @@ a {
       padding-right: 10px; }
 
 .bottomHeader {
-  background-image: url("/images/bottomHeader.png");
-  background-repeat: no-repeat;
-  height: 145px;
-  padding: 5px 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between; }
-  .bottomHeader .header__phone {
+  background: url("/images/bottomHeader.png") no-repeat;
+  background-size: cover;
+  padding: 35px 0px; }
+  .bottomHeader__container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center; }
-    .bottomHeader .header__phone .phone__icon {
-      margin-right: 14px; }
-    .bottomHeader .header__phone .phone__text {
-      color: #ffffff;
-      font-size: 17px;
-      font-weight: 600;
-      line-height: 0.81; }
-  .bottomHeader .cart__container {
-    background-image: url("/images/cart-bg.png");
-    height: 49px;
-    width: 51px;
-    border-radius: 10px;
-    display: flex; }
-    .bottomHeader .cart__container .cart__content {
+    .bottomHeader__container .header__phone {
       display: flex;
-      align-items: center;
-      margin-left: 10px; }
-      .bottomHeader .cart__container .cart__content .fa-shopping-bag.fa-2x {
-        color: #ffffff; }
-      .bottomHeader .cart__container .cart__content .text__wrapper {
-        content: " ";
-        border-radius: 50%;
-        background-color: #363636;
-        height: 25px;
-        width: 25px;
-        margin-left: 8px;
+      justify-content: center;
+      align-items: center; }
+      .bottomHeader__container .header__phone .phone__icon {
+        margin-right: 14px; }
+      .bottomHeader__container .header__phone .phone__text {
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 0.81; }
+    .bottomHeader__container .cart__container {
+      background-image: url("/images/cart-bg.png");
+      height: 49px;
+      width: 51px;
+      border-radius: 10px;
+      display: flex; }
+      .bottomHeader__container .cart__container .cart__content {
         display: flex;
-        justify-content: center;
-        align-items: center; }
-        .bottomHeader .cart__container .cart__content .text__wrapper .cart__items--text {
-          margin-left: 8px;
+        align-items: center;
+        margin-left: 10px; }
+        .bottomHeader__container .cart__container .cart__content .fa-shopping-bag.fa-2x {
           color: #ffffff; }
+        .bottomHeader__container .cart__container .cart__content .text__wrapper {
+          content: " ";
+          border-radius: 50%;
+          background-color: #363636;
+          height: 25px;
+          width: 25px;
+          margin-left: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .bottomHeader__container .cart__container .cart__content .text__wrapper .cart__items--text {
+            margin-left: 8px;
+            color: #ffffff; }
 
 .title__wrapper {
   display: inline-block; }

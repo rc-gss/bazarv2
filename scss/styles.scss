@@ -16,19 +16,21 @@ a {
 
 // Header
 .topHeader {
-  background: {
-    image: url("/images/topheader.png");
-    repeat: no-repeat;
+  background: url("/images/topheader.png") no-repeat;
+  background-size: cover;
+  padding: 20px 0;
+  &__container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  height: 53px;
-  @include flexCenter;
-  justify-content: space-between;
-  padding: 10px 40px;
   //   left-menu
   .topnav--left,
   .topnav--right {
-    .topnav__list--left,
-    .topnav__list--right {
+    .topnav__list--left {
       .menu__list {
         margin-right: 4px;
         display: inline-block;
@@ -37,13 +39,14 @@ a {
         padding: 0px 5px;
         &:hover {
           background-color: #727070;
-          ul {
+          .submenu {
             display: block;
             position: absolute;
             width: auto;
             background-color: #434343;
-            li {
-              padding: 3px auto;
+            .submenu__list {
+              padding: 3px 0;
+              
               &:hover {
                 background-color: #727070;
                 padding: 0px 2px;
@@ -51,12 +54,15 @@ a {
             }
           }
         }
-        ul {
+        .submenu {
           display: none;
           position: absolute;
           padding: 6px;
         }
       }
+    }
+    .topnav__list--right {
+      @extend .topnav__list--left
     }
   }
   .menu__link {
@@ -74,14 +80,16 @@ a {
 
 // bottomHeader
 .bottomHeader {
-  background: {
-    image: url("/images/bottomHeader.png");
-    repeat: no-repeat;
-  }
-  height: 145px;
-  padding: 5px 40px;
-  @include flexCenter;
-  justify-content: space-between;
+  background:  url("/images/bottomHeader.png") no-repeat;
+  background-size: cover;
+  padding: 35px 0px;
+    &__container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   .header__phone {
     display: flex;
     justify-content: center;
@@ -126,6 +134,7 @@ a {
       }
     }
   }
+}
 }
 //Body starts
 
